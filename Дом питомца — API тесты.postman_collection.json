@@ -1,0 +1,461 @@
+{
+  "info": {
+    "_postman_id": "8bed266b-65e0-4575-bf3b-f532ca2fdd92",
+    "name": "Дом питомца — API тесты",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52523011",
+    "_collection_link": "https://go.postman.co/collection/52523011-8bed266b-65e0-4575-bf3b-f532ca2fdd92?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Тест 1 — без фильтров",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 2 — cat, 1, male, 1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              " 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name=cat&breed_code=1&gender_code=male&age=1",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": "cat",
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "male",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 3 — dog, 2, female, 5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name=dog&breed_code=2&gender_code=female&age=5",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": "dog",
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "2",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "female",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "5",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 4 — cat, 3, пусто, 10",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name=cat&breed_code=3&gender_code&age=10",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": "cat",
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "3",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": null,
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "10",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 5 — пусто, 2, male, 5",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name&breed_code=2&gender_code=male&age=5",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": null,
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "2",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "male",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "5",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 6 — dog, пусто, female, 1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name=dog&breed_code&gender_code=female&age=1",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": "dog",
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": null,
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "female",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 7 — cat, 1, female, пусто",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name=cat&breed_code=1&gender_code=female&age",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": "cat",
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "female",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": null,
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Тест 8 — пусто, 3, male, 10",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Статус кода 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://158.160.56.133/app/pets?species_name&breed_code=3&gender_code=male&age=10",
+          "protocol": "http",
+          "host": [
+            "158",
+            "160",
+            "56",
+            "133"
+          ],
+          "path": [
+            "app",
+            "pets"
+          ],
+          "query": [
+            {
+              "key": "species_name",
+              "value": null,
+              "type": "text"
+            },
+            {
+              "key": "breed_code",
+              "value": "3",
+              "type": "text"
+            },
+            {
+              "key": "gender_code",
+              "value": "male",
+              "type": "text"
+            },
+            {
+              "key": "age",
+              "value": "10",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
